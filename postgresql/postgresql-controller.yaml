@@ -1,0 +1,24 @@
+# nohkwangsun/spark-master-controller.yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: postgresql
+  name: postgresql
+spec:
+  replicas: 1
+  selector:
+    name: postgresql
+  template:
+    metadata:
+      labels:
+        name: postgresql
+    spec:
+      containers:
+      - image: nohkwangsun/postgresql:latest
+        name: postgresql
+        ports:
+        - containerPort: 5432
+          hostPort: 5432
+          protocol: TCP
+

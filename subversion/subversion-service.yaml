@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: subversion
+  labels:
+    name: subversion
+spec:
+  ports:
+    # the port that this service should serve on
+  - name: svn
+    port: 3690
+    targetPort: 3690
+  selector:
+    name: subversion
+
