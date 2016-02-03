@@ -15,7 +15,7 @@ Brightics is a big data analytics platform which is based on spark-1.4.0.
 
 ###Before you start, below configuration setting is needed
 
-* If you want to run it on Local VM via Vagrant
+* If you want to run it on Local VMs via Vagrant
 ```console
 export KUBERNETES_PROVIDER=vagrant
 export KUBERNETES_MEMORY=2048
