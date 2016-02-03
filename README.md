@@ -13,6 +13,10 @@ Brightics is a big data analytics platform which is based on spark-1.4.0.
 
 ---
 
+###You can watch the Demo video for Starting Spark on Kubernetes
+
+* Demo video is based on spark-kubernetes-release-1.1 : https://asciinema.org/a/35027
+
 ###Before you start, below configuration setting is needed
 
 * If you want to run it on VM via Vagrant
@@ -30,6 +34,3 @@ export MINION_SIZE=t2.small
 export NUM_MINIONS=4
 ```
 
-###You can watch the procedure for Starting Spark on Kubernetes
-
-* Demo video is based on spark-kubernetes-release-1.1 : https://asciinema.org/a/35027
