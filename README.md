@@ -16,4 +16,6 @@
 
 **You can watch the procedure for Starting Spark on Kubernetes**
 
-https://github.com/kubernetes/kubernetes/pull/20298
+Demo video , Using spark-kubernetes-repo-release-1.1
+
+https://asciinema.org/a/35027
