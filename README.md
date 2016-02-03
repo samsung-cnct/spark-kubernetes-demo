@@ -1,6 +1,6 @@
 # Spark Demo on Kubernetes
 
-**Project Summary**
+###Project Summary
 
 * **spark-kubernetes-release-1.1** is based on https://github.com/kubernetes/kubernetes/tree/release-1.1/examples/spark
 
@@ -10,7 +10,7 @@
 
 ---
 
-**Before you start, below configuration setting is needed**
+###Before you start, below configuration setting is needed
 
 * If you want to run it on VM via Vagrant
 ```console
@@ -27,6 +27,6 @@ export MINION_SIZE=t2.small
 export NUM_MINIONS=4
 ```
 
-**You can watch the procedure for Starting Spark on Kubernetes**
+###You can watch the procedure for Starting Spark on Kubernetes
 
 * Demo video is based on spark-kubernetes-release-1.1 : https://asciinema.org/a/35027
