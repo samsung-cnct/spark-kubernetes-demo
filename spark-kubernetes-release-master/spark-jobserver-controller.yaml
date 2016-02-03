@@ -1,0 +1,23 @@
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: spark-jobserver-controller
+spec:
+  replicas: 1
+  selector:
+    component: spark-jobserver
+  template:
+    metadata:
+      labels:
+        component: spark-jobserver
+    spec:
+      containers:
+        - name: spark-jobserver
+          image: docker.io/nohkwangsun/spark-jobserver
+          ports:
+            - containerPort: 8090
+              hostPort: 8090
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 100m
