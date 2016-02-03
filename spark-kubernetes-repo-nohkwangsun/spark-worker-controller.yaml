@@ -1,0 +1,24 @@
+# nohkwangsun/spark-worker-controller.yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: spark-worker
+  name: spark-worker
+spec:
+  replicas: 2
+  selector:
+    name: spark-worker
+  template:
+    metadata:
+      labels:
+        name: spark-worker
+    spec:
+      containers:
+      - image: nohkwangsun/spark-worker:latest
+        name: spark-worker
+        ports:
+        - containerPort: 7078
+          hostPort: 7078
+          protocol: TCP
+

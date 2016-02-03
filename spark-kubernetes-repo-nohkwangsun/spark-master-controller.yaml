@@ -1,0 +1,27 @@
+# nohkwangsun/spark-master-controller.yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: spark-master
+  name: spark-master
+spec:
+  replicas: 1
+  selector:
+    name: spark-master
+  template:
+    metadata:
+      labels:
+        name: spark-master
+    spec:
+      containers:
+      - image: nohkwangsun/spark-master:latest
+        name: spark-master
+        ports:
+        - containerPort: 8080
+          hostPort: 8080
+          protocol: TCP
+        - containerPort: 7077
+          hostPort: 7077
+          protocol: TCP
+
