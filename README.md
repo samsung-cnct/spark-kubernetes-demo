@@ -2,11 +2,14 @@
 
 ###Project Summary
 
-* **spark-kubernetes-release-1.1** is based on https://github.com/kubernetes/kubernetes/tree/release-1.1/examples/spark
+* **spark-kubernetes-release-1.1** is based on <br/>
+https://github.com/kubernetes/kubernetes/tree/release-1.1/examples/spark
 
-* **spark-kubernetes-release-master** is based on https://github.com/kubernetes/kubernetes/tree/master/examples/spark
+* **spark-kubernetes-release-master** is based on <br/>
+https://github.com/kubernetes/kubernetes/tree/master/examples/spark
 
-* **brightics-on-kubernetes** is a project which tries to run Brightics on Kubernetes. Brightics is a big data analytics platform which is based on spark-1.4.0.
+* **brightics-on-kubernetes** is a project which tries to run Brightics on Kubernetes. <br/>
+Brightics is a big data analytics platform which is based on spark-1.4.0.
 
 ---
 
