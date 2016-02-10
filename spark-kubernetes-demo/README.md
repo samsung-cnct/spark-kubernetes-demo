@@ -6,7 +6,7 @@ This project is for the demo of the apache spark on kuberntes
 
 The demo is a real world Spark/Kubernetes example using Chicago crime [data](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2)
 
-The missions are ...
+* The missions are ...
 
 > Top 5 violent crimes
 
@@ -54,7 +54,7 @@ kubectl.sh run spark-shell -i -tty \
 
 ## Step Two: Load a Chicago Crime Dataset
 
-* Before we start, we should import packages to make the schema info of the dataset
+* Import packages to make the schema info of the dataset
 ```console
 import org.apache.spark.sql.types.{StructType,StructField,StringType};
 import org.apache.spark.sql.Row;
