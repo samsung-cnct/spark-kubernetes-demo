@@ -144,8 +144,6 @@ resultOfNL.show(5)
 ```
 
 
----
-
 * The example for spark join
 ```console
 val crimeDesc = sc.textFile("crime_description.csv") 
@@ -154,6 +152,7 @@ resultOfVC.join(crimeDescDf, resultOfVC("IUCR") === crimeDescDf("IUCR")).sort($"
 resultOfNC.join(crimeDescDf, resultOfNC("IUCR") === crimeDescDf("IUCR")).sort($"count".desc).show
 ```
 
+---
 
 ## The Results are ...
 
