@@ -4,12 +4,14 @@
 
 This project is for the demo of the apache spark on kuberntes
 
-Dataset:
-Goal:
-
 ## Step 0
 
-Start kubernetes and spark-cluster
+Preparation
+
+* You can download the data via ...
+```console
+curl -v -o /<path>/chicago_crime.csv https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.csv\?accessType\=DOWNLOAD
+```
 
 * Before you start, below configuration setting is needed
 
@@ -18,6 +20,24 @@ export KUBERNETES_PROVIDER=aws
 export MASTER_SIZE=t2.small
 export MINION_SIZE=t2.small
 export NUM_MINIONS=8
+```
+
+* Start kubernetes
+
+```console
+kube-up.sh
+```
+
+* Start spark-cluster
+```console
+kubectl.sh create -f spark-master-service.yaml
+kubectl.sh create -f spark-master-controller.yaml
+kubectl.sh create -f spark-worker-controller.yaml
+```
+
+* Start spark-shell
+```console
+kubectl.sh run spark-shell -i -tty --image="nohkwangsun/spark-shell:latest" --env="SPARK_EXECUTOR_MEMORY=1g"
 ```
 
 ## Step 1
