@@ -13,8 +13,8 @@ ENV SPARK_HOME /$SPARK_DIR
 RUN echo "${SPARK_MASTER_SERVICE_HOST} spark-master" >> /etc/hosts
 
 WORKDIR $SPARK_PARENT
-RUN tar xzf spark-1.4.0-bin-hadoop2.6.tgz
-RUN ln -s spark-1.4.0-bin-hadoop2.6 $SPARK_DIR
+RUN tar xzf spark-1.4.0-bin-hadoop2.4.tgz
+RUN ln -s spark-1.4.0-bin-hadoop2.4 $SPARK_DIR
 
 EXPOSE 8080 4040 7077 7078
 

@@ -6,7 +6,7 @@ metadata:
     name: spark-worker
   name: spark-worker
 spec:
-  replicas: 2
+  replicas: 7
   selector:
     name: spark-worker
   template:
@@ -17,6 +17,9 @@ spec:
       containers:
       - image: nohkwangsun/spark-worker:latest
         name: spark-worker
+        env:
+        - name: SPARK_WORKER_MEMORY
+          value: 1g
         ports:
         - containerPort: 7078
           hostPort: 7078
