@@ -4,13 +4,25 @@
 
 This project is for the demo of the apache spark on kuberntes
 
-## Step One: Preparation
+The demo is a real world Spark/Kubernetes example using Chicago crime [data](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2)
 
-* You can download the data via ...
+The missions are ...
+
+> Top 5 violent crimes
+
+> Top 5 non-violent crimes
+
+> Top 5 locations with violent
+
+> Top 5 locations with non-violent crimes
+
+ * You can download the data via ...
 ```console
 curl -v -o chicago_crime.csv \
  https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.csv\?accessType\=DOWNLOAD
 ```
+
+## Step One: Preparation
 
 * Before you start, below configuration setting is needed
 
