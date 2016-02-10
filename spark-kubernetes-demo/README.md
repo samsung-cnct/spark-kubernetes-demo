@@ -4,7 +4,7 @@
 
 This project is for the demo of the apache spark on kuberntes
 
-## I. Preparation
+## Step One: Preparation
 
 * You can download the data via ...
 ```console
@@ -41,7 +41,7 @@ kubectl.sh run spark-shell -i -tty \
   --env="SPARK_EXECUTOR_MEMORY=1g"
 ```
 
-## I. Load a Chicago Crime Dataset
+## Step Two: Load a Chicago Crime Dataset
 
 * Before we start, we should import packages to make the schema info of the dataset
 ```console
@@ -102,7 +102,7 @@ crimeDf.cache
 crimeDf.printSchema
 ```
 
-## III. Run Spark-Job to Solve 4 Problems 
+## Step Three: Run Spark-Job to Solve 4 Problems 
 
 * 1) Top 5 violent crimes
 ```console
