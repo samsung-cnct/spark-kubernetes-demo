@@ -144,7 +144,7 @@ resultOfNL.show(5)
 ```
 
 
-Step 3
+---
 
 * The example for spark join
 ```console
