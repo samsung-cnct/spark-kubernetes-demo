@@ -18,8 +18,7 @@ The missions are ...
 
  * You can download the data via ...
 ```console
-curl -v -o chicago_crime.csv \
- https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.csv\?accessType\=DOWNLOAD
+curl -v -o chicago_crime.csv https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.csv\?accessType\=DOWNLOAD
 ```
 
 ## Step One: Preparation
