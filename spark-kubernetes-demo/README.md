@@ -10,7 +10,8 @@ Preparation
 
 * You can download the data via ...
 ```console
-curl -v -o /<path>/chicago_crime.csv https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.csv\?accessType\=DOWNLOAD
+curl -v -o chicago_crime.csv \
+ https://data.cityofchicago.org/api/views/ijzp-q8t2/rows.csv\?accessType\=DOWNLOAD
 ```
 
 * Before you start, below configuration setting is needed
@@ -37,7 +38,9 @@ kubectl.sh create -f spark-worker-controller.yaml
 
 * Start spark-shell
 ```console
-kubectl.sh run spark-shell -i -tty --image="nohkwangsun/spark-shell:latest" --env="SPARK_EXECUTOR_MEMORY=1g"
+kubectl.sh run spark-shell -i -tty \
+  --image="nohkwangsun/spark-shell:latest" \
+  --env="SPARK_EXECUTOR_MEMORY=1g"
 ```
 
 ## Step 1
@@ -51,6 +54,12 @@ import org.apache.spark.sql.Row;
 ```
 
 * Load Chicago crime dataset from S3
+
+> You can't read data from S3 using Hadoop 2.6 prebuilt pacakge.
+> So, if you want to run this example on kubernetes,
+> you have to make your own images or use thease images that I made already.
+> https://issues.apache.org/jira/browse/SPARK-7442
+
 ```console
 val text = sc.textFile("chicago_crime.csv")
 text.partitions.size
@@ -60,7 +69,9 @@ text.partitions.size
 * Make a schema from the dataset
 ```console
 val header = text.first
-val schema = StructType(  header.split(",",22).map(fieldName => StructField(fieldName, StringType, true))  )
+val schema = StructType(
+                header.split(",",22).map(fieldName => StructField(fieldName, StringType, true))
+             )
 ```
 
 * Make a rdd from the dataset
