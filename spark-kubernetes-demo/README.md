@@ -12,7 +12,7 @@ The missions are ...
 
 > Top 5 non-violent crimes
 
-> Top 5 locations with violent
+> Top 5 locations with violent crimes
 
 > Top 5 locations with non-violent crimes
 
