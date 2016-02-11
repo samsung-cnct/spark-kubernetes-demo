@@ -71,8 +71,9 @@ import org.apache.spark.sql.Row;
 * Load Chicago crime dataset from S3
 
 > You can't read data from S3 using Hadoop 2.6 prebuilt pacakge.
+> ( The community files of Kubernetes-repo uses Hadoop 2.6 prebuilt package )
 > So, if you want to run this example on kubernetes,
-> you have to make your own images or use thease images that I made already.
+> you have to make your own images or use these images that I made already.
 > https://issues.apache.org/jira/browse/SPARK-7442
 
 ```console
