@@ -44,12 +44,20 @@ kubectl.sh create -f spark-master-service.yaml
 kubectl.sh create -f spark-master-controller.yaml
 kubectl.sh create -f spark-worker-controller.yaml
 ```
+or
+```console
+./start-spark.sh
+```
 
 * Start spark-shell
 ```console
 kubectl.sh run spark-shell -i -tty \
   --image="nohkwangsun/spark-shell:latest" \
   --env="SPARK_EXECUTOR_MEMORY=1g"
+```
+or
+```console
+./start-spark-shell.sh
 ```
 
 ## Step Two: Load a Chicago Crime Dataset
