@@ -13,15 +13,12 @@ If you follow this example, you can learn about ...
 ( In this example, we will use HDFS. Of course you can S3 or RDB also )
 
 ## Mission
-* The mission of this example are ...
+The mission of this example are ...
 
-> Top 5 (per capita) violent crimes in Chicago
-
-> Top 5 (per capita) non-violent crimes in Chicago
-
-> Top 5 (per capita) locations with violent crimes in Chicago
-
-> Top 5 (per capita) locations with non-violent crimes in Chicago
+* Top 5 (per capita) violent crimes in Chicago
+* Top 5 (per capita) non-violent crimes in Chicago
+* Top 5 (per capita) locations with violent crimes in Chicago
+* Top 5 (per capita) locations with non-violent crimes in Chicago
 
 We will resolve a real world Spark/Kubernetes example using Chicago crime
 so that we can concentrate on the example easily.
@@ -87,7 +84,7 @@ spark-master-o6pth   1/1       Running   0          10s
 
 * Monitor the Cluster using Spark WebUI & Hadoop WebUI
 
-You can see the Spark-WebUI(8080) and Hadoop-WebUI(50070) using any web-browser
+> You can see the Spark-WebUI(8080) and Hadoop-WebUI(50070) on your web-browser
 
 ```console
 $ kubectl get -o template pod spark-master-o6pth --template={{.status.hostIP}}
