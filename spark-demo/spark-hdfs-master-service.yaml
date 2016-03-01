@@ -1,3 +1,4 @@
+# nohkwangsun/spark-hdfs-master-service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -13,9 +14,15 @@ spec:
   - name: spark
     port: 7077
     targetPort: 7077
+  - name: driverui
+    port: 4040
+    targetPort: 4040
   - name: hdfs
     port: 9000
     targetPort: 9000
+  - name: dfshealth
+    port: 50070
+    targetPort: 50070
   selector:
     name: spark-master
 

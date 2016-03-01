@@ -1,4 +1,4 @@
-# nohkwangsun/spark-master-controller.yaml
+# nohkwangsun/spark-hdfs-master-controller.yaml
 apiVersion: v1
 kind: ReplicationController
 metadata:
@@ -15,7 +15,7 @@ spec:
         name: spark-master
     spec:
       containers:
-      - image: nohkwangsun/spark-master:0.2
+      - image: nohkwangsun/spark-hdfs-master:latest
         name: spark-master
         ports:
         - containerPort: 8080
@@ -24,4 +24,9 @@ spec:
         - containerPort: 7077
           hostPort: 7077
           protocol: TCP
-
+        - containerPort: 9000
+          hostPort: 9000
+          protocol: TCP
+        - containerPort: 50070
+          hostPort: 50070
+          protocol: TCP
