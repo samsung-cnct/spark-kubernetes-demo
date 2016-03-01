@@ -9,11 +9,11 @@ Brightics is a big data analytics platform which is based on spark-1.4.0.
 
 * **spark-kubernetes-demo** is a demo project for a real world example. (for S3)<br/>
 
-* **spark-kubernetes-release-1.1** is based on <br/>
-https://github.com/kubernetes/kubernetes/tree/release-1.1/examples/spark
-
 * **spark-kubernetes-master** is based on <br/>
 https://github.com/kubernetes/kubernetes/tree/master/examples/spark
+
+* **spark-kubernetes-release-1.1** is based on <br/>
+https://github.com/kubernetes/kubernetes/tree/release-1.1/examples/spark
 
 ---
 
