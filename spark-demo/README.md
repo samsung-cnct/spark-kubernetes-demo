@@ -26,9 +26,8 @@ If you follow this example, you can learn about ...
 We will resolve a real world Spark/Kubernetes example using Chicago crime
 so that we can concentrate on the example easily.
 
-[data origin](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2)
-
 [data] https://s3-us-west-2.amazonaws.com/spark-kube-demo/chicago_crime.csv (1.1 GB)
+[ORIGIN](https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-present/ijzp-q8t2)
 
 [data] https://s3-us-west-2.amazonaws.com/spark-kube-demo/crime_description.csv (16 KB)
 
