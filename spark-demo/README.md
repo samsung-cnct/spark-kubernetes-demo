@@ -33,7 +33,7 @@ so that we can concentrate on the example easily.
 
 ## Step Zero: Preparation
 
-* Before you start ...
+Before you start ...
 
 Kubernetes was installed on your machine.
 
@@ -173,7 +173,7 @@ $ /spark/bin/spark-shell --master spark://spark-master:7077 \
 scala>
 ```
 
-## Step Four: Read datasts from HDFS
+## Step Four: Read datasets from HDFS
 
 * Import packages to make the schema info of the dataset
 ```console
@@ -291,7 +291,7 @@ LOCATION(BLOCK)|COUNT|PER 10,000 (2.72 millions)
 * 4) Top 5 (per capita) locations with non-violent crimes
 ```console
 val top5nonViolentLocs = nonViolentData.map(i => (i._1,1)).reduceByKey(_ + _)
-top5nonViolentLocs.sortBy(_._2, false).take(5).
+val result = top5nonViolentLocs.sortBy(_._2, false).take(5).
   map(i => (i._1, i._2, i._2/272.0))
 sc.parallelize(result).
   toDF("LOCATION(BLOCK)","COUNT","PER 10,000 (2.72 millions)").
