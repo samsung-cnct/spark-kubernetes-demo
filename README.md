@@ -8,9 +8,9 @@ https://github.com/kubernetes/kubernetes/tree/release-1.1/examples/spark
 * **spark-kubernetes-master** is based on <br/>
 https://github.com/kubernetes/kubernetes/tree/master/examples/spark
 
-* **spark-kubernetes-demo** is a demo project for a real world example. (S3)<br/>
+* **spark-kubernetes-demo** is a demo project for a real world example. (for S3)<br/>
 
-* **spark-demo** is a demo project for a real world example. (HDFS)<br/>
+* **spark-demo** is a demo project for a real world example. (for HDFS)<br/>
 
 * **brightics-on-kubernetes** is a project which tries to run Brightics on Kubernetes. <br/>
 Brightics is a big data analytics platform which is based on spark-1.4.0.
