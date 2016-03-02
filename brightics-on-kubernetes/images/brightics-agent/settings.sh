@@ -1,0 +1,10 @@
+export MASTER=spark://spark-master:7077
+export PORT=9095
+export LOG_DIR=${appdir}/logs/$PORT
+export PIDFILE=spark-jobserver-$PORT.pid
+export JOBSERVER_MEMORY=1G
+export CPU_CORES=2
+export MEMORY_PER_NODE=1G
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export SPARK_HOME=/spark
+export SPARK_CONF_DIR=$SPARK_HOME/conf
