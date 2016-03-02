@@ -1,0 +1,10 @@
+export MASTER=spark://localhost:7077
+export PORT=9095
+export LOG_DIR=${appdir}/logs/$PORT
+export PIDFILE=spark-jobserver-$PORT.pid
+export JOBSERVER_MEMORY=128m
+export CPU_CORES=2
+export MEMORY_PER_NODE=128m
+export JAVA_HOME=/usr
+export SPARK_HOME=/brightics/spark-1.4.0
+export SPARK_CONF_DIR=$SPARK_HOME/conf

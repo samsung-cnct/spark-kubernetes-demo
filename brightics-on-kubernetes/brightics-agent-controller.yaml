@@ -1,0 +1,24 @@
+# nohkwangsun/spark-jobserver-controller.yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  labels:
+    name: brightics-agent
+  name: brightics-agent
+spec:
+  replicas: 1
+  selector:
+    name: brightics-agent
+  template:
+    metadata:
+      labels:
+        name: brightics-agent
+    spec:
+      containers:
+      - image: 192.168.99.100:5000/brightics-agent:latest
+        name: brightics-agent
+        ports:
+        - containerPort: 9095
+          hostPort: 9095
+          protocol: TCP
+

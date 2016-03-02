@@ -15,7 +15,7 @@ spec:
         name: spark-worker
     spec:
       containers:
-      - image: nohkwangsun/spark-worker:latest
+      - image: localhost:5000/spark-worker:latest
         name: spark-worker
         env:
         - name: SPARK_WORKER_MEMORY

@@ -1,40 +1,17 @@
-FROM nohkwangsun/spark-file
+FROM java:latest
 
+RUN apt-get update
+RUN apt-get install -y wget curl net-tools
 
-
-#INSTALL
-RUN apt-get install -y curl      
-
-
-
-#SPARK
-ENV SPARK_DIR spark
-ENV SPARK_HOME /$SPARK_DIR
+COPY brightics-v2.0_20151026-spark-1.4.0.tgz .
+RUN tar xzf brightics-v2.0_20151026-spark-1.4.0.tgz
+RUN mv spark-1.4.0 spark
 RUN echo "${SPARK_MASTER_SERVICE_HOST} spark-master" >> /etc/hosts
 
-WORKDIR $SPARK_PARENT
-RUN tar xzf spark-1.4.0-bin-hadoop2.4.tgz
-RUN ln -s spark-1.4.0-bin-hadoop2.4 $SPARK_DIR
+ENV SPARK_MASTER_IP spark-master
+ENV SPARK_MASTER_PORT 7077
+ENV SPARK_WORKER_PORT 7078
+ENV SPARK_MASTER_WEBUI_PORT 8080
+ENV SPARK_WORKER_WEBUI_PORT 8081
 
-EXPOSE 8080 4040 7077 7078
-
-WORKDIR $SPARK_HOME/conf
-RUN touch spark-env.sh
-RUN echo SPARK_WORKER_PORT=7078 >> spark-env.sh
-
-
-#SSH
-#RUN apt-get install -y openssh-server
-#RUN mkdir /var/run/sshd
-#RUN echo 'root:1234' | chpasswd
-#RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-
-# SSH login fix. Otherwise user is kicked off after login
-#RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
-
-#ENV NOTVISIBLE "in users profile"
-#RUN echo "export VISIBLE=now" >> /etc/profile
-
-#EXPOSE 22
-#CMD ["/usr/sbin/sshd", "-D"]
-
+EXPOSE 8080 8081 4040 7077 7078

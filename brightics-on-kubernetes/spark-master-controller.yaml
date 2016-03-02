@@ -15,7 +15,7 @@ spec:
         name: spark-master
     spec:
       containers:
-      - image: nohkwangsun/spark-master:latest
+      - image: 10.245.1.1:5000/spark-master
         name: spark-master
         ports:
         - containerPort: 8080
